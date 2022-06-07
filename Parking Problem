@@ -1,0 +1,16 @@
+Parking system for a parking lot. The parking lot has three kinds of parking spaces: big, medium, and small, with a fixed number of slots for each size.
+
+
+Language is Python 3 (Maybe 3.5 or 3.7), just do check it how beautifully it works:-
+
+class ParkingSystem:
+  def __init__(self, big, medium, small):
+    self.slots = {1: big, 2: medium, 3: small}
+ 
+  def addCar(self, carType):
+    
+    if self.slots[carType] == 0:
+        return False
+    else:
+        self.slots[carType] -= 1
+        return True
